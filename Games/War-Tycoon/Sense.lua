@@ -533,7 +533,7 @@ function InstanceObject:Render()
 			:gsub("{distance}", round(depth))
 			:gsub("{position}", tostring(world))
 			:gsub("{health}", tonumber(instance.Health.Value))
-			:gsub("{driver}", instance:findFirstChild("DriveSeat").Driver or instance:findFirstChild("Seats").DriveSeat.Driver or "No Driver Found")
+			:gsub("{driver}", instance:findFirstChild("DriveSeat").Driver.Value or instance:findFirstChild("Seats").DriveSeat.Driver.Value or "No Driver Found")
 	end
 end
 
