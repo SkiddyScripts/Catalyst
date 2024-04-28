@@ -532,7 +532,8 @@ function InstanceObject:Render()
 			:gsub("{name}", instance.Name)
 			:gsub("{distance}", round(depth))
 			:gsub("{position}", tostring(world))
-			:gsub("{health}", instance.Health.Value)
+			:gsub("{health}", tonumber(instance.Health.Value))
+			:gsub("{driver}", instance.DriveSeat.Driver or "No Driver")
 	end
 end
 
