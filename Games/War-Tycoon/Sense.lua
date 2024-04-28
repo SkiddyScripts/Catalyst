@@ -167,6 +167,9 @@ function EspObject:Construct()
 			healthBarOutline = self:_create("Line", { Thickness = 3, Visible = false }),
 			healthBar = self:_create("Line", { Thickness = 1, Visible = false }),
 			healthText = self:_create("Text", { Center = true, Visible = false }),
+			shieldBarOutline = self:_create("Line", { Thickness = 3, Visible = false }),
+			shieldBar = self:_create("Line", { Thickness = 1, Visible = false }),
+			shieldText = self:_create("Text", { Center = true, Visible = false }),
 			name = self:_create("Text", { Text = self.player.DisplayName, Center = true, Visible = false }),
 			distance = self:_create("Text", { Center = true, Visible = false }),
 			weapon = self:_create("Text", { Center = true, Visible = false }),
@@ -528,7 +531,8 @@ function InstanceObject:Render()
 		text.Text = options.text
 			:gsub("{name}", instance.Name)
 			:gsub("{distance}", round(depth))
-			:gsub("{position}", tostring(world));
+			:gsub("{position}", tostring(world))
+			:gsub("{health}", instance.Health.Value)
 	end
 end
 
@@ -698,6 +702,8 @@ function EspInterface.Unload()
 end
 
 -- game specific functions
+
+
 function EspInterface.getWeapon(player)
 	if player.Character then
         local Tool = player.Character:FindFirstChildOfClass("Tool")
