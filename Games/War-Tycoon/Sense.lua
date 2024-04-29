@@ -532,7 +532,6 @@ function InstanceObject:Render()
 			:gsub("{name}", instance.Name)
 			:gsub("{distance}", round(depth))
 			:gsub("{position}", tostring(world))
-			:gsub("{health}", tonumber(instance.Health.Value))
 	end
 end
 
