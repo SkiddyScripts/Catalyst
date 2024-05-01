@@ -167,9 +167,6 @@ function EspObject:Construct()
 			healthBarOutline = self:_create("Line", { Thickness = 3, Visible = false }),
 			healthBar = self:_create("Line", { Thickness = 1, Visible = false }),
 			healthText = self:_create("Text", { Center = true, Visible = false }),
-			shieldBarOutline = self:_create("Line", { Thickness = 3, Visible = false }),
-			shieldBar = self:_create("Line", { Thickness = 1, Visible = false }),
-			shieldText = self:_create("Text", { Center = true, Visible = false }),
 			name = self:_create("Text", { Text = self.player.DisplayName, Center = true, Visible = false }),
 			distance = self:_create("Text", { Center = true, Visible = false }),
 			weapon = self:_create("Text", { Center = true, Visible = false }),
@@ -555,9 +552,9 @@ local EspInterface = {
 			boxOutline = true,
 			boxOutlineColor = { Color3.new(), 1 },
 			boxFill = false,
-			boxFillColor = { Color3.new(1,0,0), 0.5 },
+			boxFillColor = { Color3.new(1,1,1), 0.5 },
 			healthBar = false,
-			healthyColor = Color3.new(0,1,0),
+			healthyColor = Color3.new(0.498039, 1, 0.454901),
 			dyingColor = Color3.new(1,0,0),
 			healthBarOutline = true,
 			healthBarOutlineColor = { Color3.new(), 0.5 },
@@ -592,7 +589,7 @@ local EspInterface = {
 			offScreenArrowOutlineColor = { Color3.new(), 1 },
 			chams = false,
 			chamsVisibleOnly = false,
-			chamsFillColor = { Color3.new(0.2, 0.2, 0.2), 0.5 },
+			chamsFillColor = { Color3.new(0.2, 0.2, 0.2), 1 },
 			chamsOutlineColor = { Color3.new(1,1,1), 0 },
 		},
 		friendly = {
@@ -639,7 +636,7 @@ local EspInterface = {
 			offScreenArrowOutlineColor = { Color3.new(), 1 },
 			chams = false,
 			chamsVisibleOnly = false,
-			chamsFillColor = { Color3.new(0.2, 0.2, 0.2), 0.5 },
+			chamsFillColor = { Color3.new(0.2, 0.2, 0.2), 1 },
 			chamsOutlineColor = { Color3.new(0,1,0), 0 }
 		}
 	}
