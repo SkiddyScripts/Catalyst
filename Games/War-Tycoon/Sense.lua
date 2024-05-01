@@ -589,7 +589,7 @@ local EspInterface = {
 			offScreenArrowOutlineColor = { Color3.new(), 1 },
 			chams = false,
 			chamsVisibleOnly = false,
-			chamsFillColor = { Color3.new(0.2, 0.2, 0.2), 1 },
+			chamsFillColor = { Color3.new(0.2, 0.2, 0.2), 0 },
 			chamsOutlineColor = { Color3.new(1,1,1), 0 },
 		},
 		friendly = {
@@ -636,7 +636,7 @@ local EspInterface = {
 			offScreenArrowOutlineColor = { Color3.new(), 1 },
 			chams = false,
 			chamsVisibleOnly = false,
-			chamsFillColor = { Color3.new(0.2, 0.2, 0.2), 1 },
+			chamsFillColor = { Color3.new(0.2, 0.2, 0.2), 0 },
 			chamsOutlineColor = { Color3.new(0,1,0), 0 }
 		}
 	}
