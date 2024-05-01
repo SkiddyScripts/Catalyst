@@ -452,7 +452,7 @@ function ChamObject:Update()
 	highlight.Enabled = enabled and options.chams;
 	if highlight.Enabled then
 		highlight.Adornee = character;
-		highlight.FillColor = parseColor(self, options.chamsFillColor[1]);
+		highlight.FillColor =  options.chamsTeamColor and parseColor(self, "Team Color") or parseColor(self, options.chamsFillColor[1]);
 		highlight.FillTransparency = options.chamsFillColor[2];
 		highlight.OutlineColor = parseColor(self, options.chamsOutlineColor[1], true);
 		highlight.OutlineTransparency = options.chamsOutlineColor[2];
@@ -588,6 +588,7 @@ local EspInterface = {
 			offScreenArrowOutline = true,
 			offScreenArrowOutlineColor = { Color3.new(), 1 },
 			chams = false,
+			chamsTeamColor = false,
 			chamsVisibleOnly = false,
 			chamsFillColor = { Color3.new(1, 1, 1), 0 },
 			chamsOutlineColor = { Color3.new(1,1,1), 0 },
@@ -635,6 +636,7 @@ local EspInterface = {
 			offScreenArrowOutline = true,
 			offScreenArrowOutlineColor = { Color3.new(), 1 },
 			chams = false,
+			chamsTeamColor = false,
 			chamsVisibleOnly = false,
 			chamsFillColor = { Color3.new(1, 1, 1), 0 },
 			chamsOutlineColor = { Color3.new(0,1,0), 0 }
